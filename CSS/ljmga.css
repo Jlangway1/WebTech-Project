@@ -1,0 +1,74 @@
+h1 {
+  text-align: center;
+  color: rgb(42, 42, 117);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+h2{
+    text-align: center;
+    color: rgb(158, 7, 7);
+}
+h3{
+    text-align: center;
+}
+#aboutp {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+#aboutlogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    width: 200px;
+}
+
+.coursepic{
+    height: 400px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Nav Bar CSS */
+img {
+  width: 30px;
+  height: 40px;
+  margin-top: 1px;
+}
+body {
+  display: block;
+    margin-left: auto;
+  margin-right: auto;
+}
+nav {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul {
+  display: inline-block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+li {
+  float: left;
+  border-right: 1px solid black;
+}
+li:last-child {
+  border-right: none;
+}
+li a {
+  display: block;
+  padding: 14px 16px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="CSS/ljmga.css" />
+    <style>
+      fieldset {
+        border: 5px dotted rgb(253, 5, 5);
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      form {
+        margin: auto;
+        width: 650px;
+      }
+      iframe{
+          margin-left: auto;
+          margin-right: auto;
+          display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Code for the Navigation bar .. Found on each page-->
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html"><img src="images/ljmga.png" alt="LJMGA Logo" /></a>
+        </li>
+        <li><a href="about.html" class="About Us">About Us</a></li>
+        <li><a href="founders.html" class="founders">Founders</a></li>
+        <li><a href="courses.html" class="Courses">Courses</a></li>
+        <li><a href="lessons.html" class="Lessons">Lessons</a></li>
+        <li><a href="past-results.html" class="Past Results">Past Results</a></li>
+        <li><a href="contact.html" class="Contact">Contact</a></li>
+      </ul>
+    </nav>
+    <h1>Contact Leo J Martin Golf Association</h1>
+    <form action="https://oim-apis.herokuapp.com/form2" method="post">
+      <fieldset>
+        Leave a Comment / Register
+        <div>
+          <label for="Name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div>
+          <label for="Email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+          />
+        </div>
+        <div>
+          <label for="comment">Comments</label>
+        </div>
+        <div>
+          <textarea
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="10"
+            placeholder="Leave you message here..."
+          ></textarea>
+        </div>
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+      </fieldset>
+    </form>
+    <div>
+        <br>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.4663674645317!2d-71.26956398425234!3d42.332579344828694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3839573054345%3A0xa6be73db775ab82!2sLeo%20J.%20Martin%20Memorial%20Golf%20Course!5e0!3m2!1sen!2sus!4v1648233021336!5m2!1sen!2sus"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </body>
+</html>
