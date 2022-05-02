@@ -25,8 +25,23 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="stylesheet" href="CSS/ljmga.css" />
     <style>
-      .rankingp {
+      table {
+        font-family: 'Times New Roman', Times, serif;
+        border-collapse: collapse;
+        width: 40%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+      }
+      td,th {
+        border: 1px solid black;
         text-align: center;
+      }
+      button{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
       }
     </style>
   </head>
@@ -55,27 +70,75 @@
       title="scorecard"
       class="coursepic"
     />
-    <p class="rankingp">1. Evan T 2. Justin L, 3. Jack P, 4. Wes H</p>
-    <br />
+    <table>
+      <tr>
+        <th>First</th>
+        <th>Second</th>
+        <th>Third</th>
+        <th>Fourth</th>
+      </tr>
+      <tr>
+        <td>Evan (43)</td>
+        <td>Justin (47)</td>
+        <td>Jack (48)</td>
+        <td>Wes (N/A)</td>
+      </tr>
+    </table>
     <img
       src="images/scorecard2.jpg"
       alt="scorecard2"
       title="scorecard2"
       class="coursepic"
     />
-    <p class="rankingp">1. Justin L, 2. Evan T, 3. Tyler H, 4. Wes H</p>
-    <br />
+    <table>
+      <tr>
+        <th>First</th>
+        <th>Second</th>
+        <th>Third</th>
+        <th>Fourth</th>
+      </tr>
+      <tr>
+        <td>Justin (40)</td>
+        <td>Evan (44)</td>
+        <td>Tyler (45)</td>
+        <td>Wes (54)</td>
+      </tr>
+    </table>
     <img
       src="images/scorecard3.jpg"
       alt="scorecard3"
       title="scorecard3"
       class="coursepic"
     />
-    <p class="rankingp">1. Evan T, 2 TIE Justin L & Tyler H, 4. Wes H</p>
-    <br />
+    <table>
+      <tr>
+        <th>First</th>
+        <th>Second</th>
+        <th>Third</th>
+        <th>Fourth</th>
+      </tr>
+      <tr>
+        <td>Evan (47)</td>
+        <td>Justin - tied (52)</td>
+        <td>Tyler - tied (52)</td>
+        <td>Wes (61)</td>
+      </tr>
+    </table>
+    <h2>The best player in the league is <span id="bestPlayer"></span></h2>
+    <button id="best-btn">Click here to find out</button>
+    <br>
     <footer>
       <p>Visit LJMGA Sitemap</p>
       <a href="sitemap.html">Sitemap</a>
     </footer>
+    <script>
+      function changeText () {
+        console.log("...starting change text function...")
+        document.getElementById("bestPlayer").innerText = "not Wes"
+      }
+      document.getElementById("best-btn").onclick = function (){
+        changeText();
+      }
+    </script>
   </body>
 </html>

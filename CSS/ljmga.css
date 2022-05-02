@@ -25,6 +25,11 @@ footer {
   font-family: "Times New Roman", Times, serif;
   font-size: 20px;
 }
+.foundersp {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18px;
+}
 #aboutlogo {
   display: block;
   margin-left: auto;
@@ -45,7 +50,7 @@ footer {
 img {
   width: 30px;
   height: 40px;
-  margin-top: 1px;
+  margin-top: -8px;
 }
 body {
   display: block;

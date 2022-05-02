@@ -28,9 +28,78 @@
       .skillp {
         padding-left: 50px;
         padding-right: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
         text-align: center;
         font-size: 18px;
         font-family: "Times New Roman", Times, serif;
+      }
+      button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #clock {
+        text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+      .slideshow-container {
+        position: relative;
+        margin: auto;
+        max-width: 1000px;
+      }
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 150px;
+        margin-top: 600px;
+        color: red;
+        font-size: 18px;
+        font-weight: bold;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2x;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      #dots {
+        text-align: center;
+      }
+      .active, dot:hover {
+        background-color: #717171;
+      }
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
       }
     </style>
   </head>
@@ -51,45 +120,78 @@
       </ul>
     </nav>
     <h1>$12 Rounds | Lifelong Memories</h1>
+    <h3>
+      <div id="clock"></div>
+    </h3>
     <h2>The Leo J Martin Golf Association</h2>
     <p class="skillp">
       "The Leo J Martin Golf Association (LJMGA) is a league of Babson college
       students who are hungry to play 9 holes day in and day out. We don't care
       if its during twilight hours, we just love the game of golf."
     </p>
-    <br />
+
     <h3>What is the Average Skill Level of the LJMGA?</h3>
     <p class="skillp">
       Player level ranges from professional (Tyler) to beginner (Wes and Jack).
       All playing levels are welcome to join the LJMGA. Having your own golf
       clubs is recommended. Last season LJMGA member Wes H borrowed clubs every
       round. He has now upgraded to these bad boys shown in the image below.
-      Shout out to Savers in Framingham!
+      Shout out to Savers in Framingham! (Mouse over the clubs for a Wesley
+      surprise!)
     </p>
     <img
       src="images/wes-clubs_orig.jpg"
       alt="Wes-clubs"
       title="Wes Clubs"
       class="coursepic"
+      id="wes-img"
     />
     <h3>We Now Offer Lessons!</h3>
     <p class="skillp">
       Train with any of our LJMGA league members. Pro tip don't ask for Wes
     </p>
-    <img
-      src="images/trev_orig.jpg"
-      alt="trevgolf"
-      title="trevor lesson"
-      class="coursepic"
-    />
-    <img
-      src="images/dembo.jpg"
-      alt="Dembo"
-      title="Dembo Practice"
-      class="coursepic"
-    />
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img
+          src="images/trev_orig.jpg"
+          alt="trevgolf"
+          title="trevor lesson"
+          class="coursepic"
+          width="100%"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="images/dembo.jpg"
+          alt="Dembo"
+          title="Dembo Practice"
+          class="coursepic"
+          width="100%"
+        />
+      </div>
+      <div class="mySlides fade">
+        <img
+          src="images/wes.png"
+          alt="Wes"
+          title="Wes Swing"
+          class="coursepic"
+          width="100%"
+        />
+      </div>
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">(</a>
+    <a class="next" onclick="plusSlides(1)">)</a>
     <br />
-    <footer>
+    <div id="dots">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <br />
+    <button id="button">Change the footer color!</button>
+    <br />
+    <footer id="footer">
       <p>
         “If you think it’s hard to meet new people, try picking up the wrong
         golf ball.” ~ Wes
@@ -97,5 +199,77 @@
       <p>Visit LJMGA Sitemap</p>
       <a href="sitemap.html">Sitemap</a>
     </footer>
+    <script>
+      function wesFire() {
+        console.log("...starting wes mouseover function");
+        document.getElementById("wes-img").src = "images/Wes-fire.PNG";
+      }
+      document.getElementById("wes-img").onmouseover = function () {
+        wesFire();
+      };
+
+      function wesClubs() {
+        console.log("...starting wes mouseout function");
+        document.getElementById("wes-img").src = "images/wes-clubs_orig.jpg";
+      }
+      document.getElementById("wes-img").onmouseout = function () {
+        wesClubs();
+      };
+
+      function backgroundColor() {
+        console.log("..starting background color function...");
+        document.getElementById("footer").style.backgroundColor = "rgb(158, 7, 7)";
+      }
+
+      document.getElementById("button").onclick = function () {
+        backgroundColor();
+      };
+
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", " ")
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+
+      //clock function
+      function showTime() {
+        const clock = document.getElementById("clock");
+        const refresh = new Date();
+        const hours = refresh.getHours();
+        let minutes = refresh.getMinutes();
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+
+        let seconds = refresh.getSeconds();
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+        clock.innerHTML = hours + ":" + minutes + ":" + seconds;
+        setTimeout(showTime, 1000);
+      }
+      document.querySelector("body").onload = showTime;
+    </script>
   </body>
 </html>

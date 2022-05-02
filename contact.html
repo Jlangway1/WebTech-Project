@@ -61,7 +61,12 @@
       </ul>
     </nav>
     <h1>Contact Leo J Martin Golf Association</h1>
-    <form action="https://oim-apis.herokuapp.com/form2" method="post">
+    <form
+      action="https://oim-apis.herokuapp.com/form2"
+      onsubmit="return validateName()"
+      method="post"
+      name="myForm"
+    >
       <fieldset>
         Leave a Comment / Register
         <div>
@@ -115,5 +120,15 @@
       <p>Visit LJMGA Sitemap</p>
       <a href="sitemap.html">Sitemap</a>
     </footer>
+    <script>
+      //FORM VALIDATION
+      function validateName() {
+        let x = document.forms["myForm"]["name"].value;
+        if (x == "") {
+          alert("Name must be filled out");
+          return false;
+        }
+      }
+    </script>
   </body>
 </html>
