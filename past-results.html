@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="CSS/ljmga.css" />
     <style>
       table {
-        font-family: 'Times New Roman', Times, serif;
+        font-family: "Times New Roman", Times, serif;
         border-collapse: collapse;
         width: 40%;
         margin-top: 20px;
@@ -34,11 +34,12 @@
         margin-right: auto;
         margin-bottom: 20px;
       }
-      td,th {
+      td,
+      th {
         border: 1px solid black;
         text-align: center;
       }
-      button{
+      button {
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -126,19 +127,19 @@
     </table>
     <h2>The best player in the league is <span id="bestPlayer"></span></h2>
     <button id="best-btn">Click here to find out</button>
-    <br>
+    <br />
     <footer>
       <p>Visit LJMGA Sitemap</p>
       <a href="sitemap.html">Sitemap</a>
     </footer>
     <script>
-      function changeText () {
-        console.log("...starting change text function...")
-        document.getElementById("bestPlayer").innerText = "not Wes"
+      function changeText() {
+        console.log("...starting change text function...");
+        document.getElementById("bestPlayer").innerText = "not Wes";
       }
-      document.getElementById("best-btn").onclick = function (){
+      document.getElementById("best-btn").onclick = function () {
         changeText();
-      }
+      };
     </script>
   </body>
 </html>
